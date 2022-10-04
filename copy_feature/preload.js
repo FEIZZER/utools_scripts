@@ -2,11 +2,11 @@
  * @Author: feizzer
  * @Date: 2022-04-30 14:46:57
  * @LastEditors: feizzer
- * @LastEditTime: 2022-10-04 16:28:32
+ * @LastEditTime: 2022-10-04 19:52:44
  * @Description: 
  */
 window.exports = {
-    "getcon": { // 注意：键对应的是 plugin.json 中的 features.code
+    "push": { // 注意：键对应的是 plugin.json 中的 features.code
        mode: "none",  // 用于无需 UI 显示，执行一些简单的代码
        args: {
           // 进入插件应用时调用

@@ -3,9 +3,9 @@
 	"preload": "preload.js",
 	"features": [
 		{
-			"code": "getcon",
+			"code": "push",
 			"explain": "get the content in specific file",
-			"cmds": ["getcon"],
+			"cmds": ["push"],
 			"platform":["win32", "darwin"]
 		}, 
 		{
