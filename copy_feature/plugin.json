@@ -4,7 +4,7 @@
 	"features": [
 		{
 			"code": "push",
-			"explain": "get the content in specific file",
+			"explain": "paste the content in specific file",
 			"cmds": ["push"],
 			"platform":["win32", "darwin"]
 		}, 
@@ -13,9 +13,25 @@
 		  "explain": "copy the txt into a specific path",
 		  "cmds":["copy"],
 		  "platform":["win32", "darwin"]
+		},
+		{
+			"code": "img_push",
+			"explain":"paste the img in specific file",
+			"platform": ["win32", "darwin"],
+			"cmds": [{
+				"type": "img",
+				"label": "复制图片到指定目录"
+			}, 
+			{
+				"type": "over",
+				"label": "over_test",
+				"minLength": 1,
+				"maxLength": 500
+			}, "test"]
 		}
 	],
 	"pluginSetting": {
 		"single": false
 	}
 }
+ 

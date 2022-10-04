@@ -2,7 +2,7 @@
  * @Author: feizzer
  * @Date: 2022-04-30 14:46:57
  * @LastEditors: feizzer
- * @LastEditTime: 2022-10-04 19:52:44
+ * @LastEditTime: 2022-10-04 21:15:00
  * @Description: 
  */
 window.exports = {
@@ -12,7 +12,6 @@ window.exports = {
           // 进入插件应用时调用
           enter: (action) => {
             var fs = require('fs')
-             console.log("进入插件", action)
              var inputRes = window.utools.setSubInput((text) => {
 
                 window.document.onkeydown = function(event) {
@@ -42,6 +41,15 @@ window.exports = {
                     window.utools.hideMainWindow()
                     
                 })
+            }
+        }
+    },
+    "img_push": {
+        mode: "none",
+        args: {
+            enter: (action) => {
+                console.log('进入插件', action)
+                action.payload
             }
         }
     }

@@ -2,24 +2,22 @@
  * @Author: feizzer
  * @Date: 2022-10-02 21:32:39
  * @LastEditors: feizzer
- * @LastEditTime: 2022-10-02 22:48:21
+ * @LastEditTime: 2022-10-04 21:27:43
  * @Description: 
  */
 
-var fs = require('fs')
-// var ws = fs.createWriteStream("c:/test.txt",{flags:"w"})
-// ws.write("text")
-// ws.close()
+imgstr = "data:image/png;base64,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"
 
+function dataURLtoFile(dataurl, filename) {
+    var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+    while(n--){
+        u8arr[n] = bstr.charCodeAt(n);
+    }
+    return new File([u8arr], filename, {type:mime});
+}
+console.log(dataURLtoFile(imgstr, "hahetest"))
 
-var rs = fs.createReadStream('d:/test.txt', {'flag': "r"})
-rs.on('data', (data) => {
-    // console.log(data.toString())
-})
-res = fs.readFile('d:/test.txt', function(err, data) {
-    // console.log(data.toString())
-})
-// console.log(res)
 
 
 
