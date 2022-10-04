@@ -1,0 +1,21 @@
+{ 
+	"logo": "logo.png",
+	"preload": "preload.js",
+	"features": [
+		{
+			"code": "getcon",
+			"explain": "get the content in specific file",
+			"cmds": ["getcon"],
+			"platform":["win32", "darwin"]
+		}, 
+		{
+		  "code": "copy",
+		  "explain": "copy the txt into a specific path",
+		  "cmds":["copy"],
+		  "platform":["win32", "darwin"]
+		}
+	],
+	"pluginSetting": {
+		"single": false
+	}
+}
