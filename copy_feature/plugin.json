@@ -3,31 +3,28 @@
 	"preload": "preload.js",
 	"features": [
 		{
-			"code": "push",
+			"code": "getcon",
 			"explain": "paste the content in specific file",
-			"cmds": ["push"],
+			"cmds": ["getcon"],
 			"platform":["win32", "darwin"]
 		}, 
 		{
-		  "code": "copy",
+		  "code": "pushcon",
 		  "explain": "copy the txt into a specific path",
-		  "cmds":["copy"],
+		  "cmds":["pushcon"],
 		  "platform":["win32", "darwin"]
 		},
 		{
-			"code": "img_push",
+			"code": "pushcon2",
 			"explain":"paste the img in specific file",
 			"platform": ["win32", "darwin"],
-			"cmds": [{
-				"type": "img",
-				"label": "复制图片到指定目录"
-			}, 
+			"cmds": [
 			{
 				"type": "over",
-				"label": "over_test",
+				"label": "pushcon",
 				"minLength": 1,
 				"maxLength": 500
-			}, "test"]
+			}]
 		}
 	],
 	"pluginSetting": {
