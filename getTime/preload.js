@@ -12,7 +12,6 @@ window.exports = {
           // 进入插件应用时调用
           enter: (action) => {
             timeNow = time.now()
-            
           }  
        } 
     },
