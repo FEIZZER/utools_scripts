@@ -39,7 +39,7 @@ window.exports = {
             }
         }
     },
-    "pushcon2": {
+    "pushcon": {
         mode: "none",
         args: {
             enter: (action) => {
@@ -48,19 +48,49 @@ window.exports = {
                 window.utools.hideMainWindow()
             }
         }
+    },
+    "pushImg":{
+        mode: "none",
+        args: {
+            enter: (action) => {
+                writeIntoImage(action.payload)
+                window.utools.outPlugin()
+                window.utools.hideMainWindow()
+            }
+        }
+    },
+    "getImg": {
+        mode: "none",
+        args: {
+            enter: () => {
+                buffer = readFromImage()
+                utools.copyImage(buffer)
+                console.log(buffer)
+                window.utools.outPlugin()
+                window.utools.hideMainWindow()
+            }
+        }
     }
  }
 
+
+var fs = require('fs')
+
  var filePath = '//10.200.6.10/hillstonenet/yongjianwu/content.txt'
  function writeIntoFile(text) {
-    var fs = require('fs')
     fs.writeFileSync(filePath, text, 'utf8')
  }
 
  function readFromFile() {
-    var fs = require('fs')
     res = fs.readFileSync(filePath, 'utf8')
     return res
  }
 
+ function readFromImage() {
+    const buffer = fs.readFileSync(filePath, 'utf8')
+    return buffer
+ }
 
+function writeIntoImage(buffer) {
+    writeIntoFile(buffer)
+}

@@ -4,19 +4,13 @@
 	"features": [
 		{
 			"code": "getcon",
-			"explain": "paste the content in specific file",
+			"explain": "copy the string in specific file",
 			"cmds": ["getcon"],
 			"platform":["win32", "darwin"]
 		}, 
 		{
-		  "code": "pushcon",
-		  "explain": "copy the txt into a specific path",
-		  "cmds":["pushcon"],
-		  "platform":["win32", "darwin"]
-		},
-		{
-			"code": "pushcon2",
-			"explain":"paste the img in specific file",
+			"code": "pushcon",
+			"explain":"paste the string in specific file",
 			"platform": ["win32", "darwin"],
 			"cmds": [
 			{
@@ -25,10 +19,26 @@
 				"minLength": 1,
 				"maxLength": 100000
 			}]
+		},
+		{
+			"code": "pushImg",
+			"explain":"paste the image in specific file",
+			"platform": ["win32", "darwin"],
+			"cmds": [
+				{
+					"type": "img",
+					"label": "pushImg"
+				}
+			]
+		},
+		{
+			"code": "getImg",
+			"explain":"copy the image in specific file",
+			"platform": ["win32", "darwin"],
+			"cmds": ["getimg"]
 		}
 	],
 	"pluginSetting": {
 		"single": false
 	}
 }
- 
