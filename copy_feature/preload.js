@@ -32,7 +32,13 @@ window.exports = {
         args: {
             enter: (action) => {
                 res = readFromFile()
-                utools.copyText(res)
+                var reg = new RegExp("^data\:image\/.+\;base64,.+")
+                isImage = reg.test(res)
+                if (isImage) {
+                    utools.copyImage(res)
+                } else {
+                    utools.copyText(res)
+                }
                 window.utools.outPlugin()
                 window.utools.hideMainWindow()
             }
@@ -64,7 +70,6 @@ window.exports = {
             enter: () => {
                 buffer = readFromImage()
                 utools.copyImage(buffer)
-                console.log(buffer)
                 window.utools.outPlugin()
                 window.utools.hideMainWindow()
             }
@@ -75,7 +80,7 @@ window.exports = {
 
 var fs = require('fs')
 
- var filePath = '//10.200.6.10/hillstonenet/yqluo/content.txt'
+ var filePath = '//10.200.6.10/hillstonenet/yongjianwu/content.txt'
  function writeIntoFile(text) {
     fs.writeFileSync(filePath, text, 'utf8')
  }
