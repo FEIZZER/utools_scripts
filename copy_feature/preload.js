@@ -24,7 +24,6 @@ window.exports = {
                 }
              }, "text you content", true)
 
-             console.log(inputRes)
           }  
        } 
     },
@@ -76,7 +75,7 @@ window.exports = {
 
 var fs = require('fs')
 
- var filePath = '//10.200.6.10/hillstonenet/yongjianwu/content.txt'
+ var filePath = '//10.200.6.10/hillstonenet/yqluo/content.txt'
  function writeIntoFile(text) {
     fs.writeFileSync(filePath, text, 'utf8')
  }

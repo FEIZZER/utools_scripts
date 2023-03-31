@@ -5,10 +5,12 @@
  * @LastEditTime: 2022-10-04 21:27:43
  * @Description: 
  */
-var fs = require('fs')
+var dns = require('dns')
 
-// var imagePath = '//10.200.6.10/hillstonenet/yongjianwu/content.png'
+dns.lookup("github.com", function(error, address) {
+    if (error) {
 
-// imagebuffer = fs.readFileSync(imagePath)
-
-// fs.writeFileSync('//10.200.6.10/hillstonenet/yongjianwu/content2.png', imagebuffer)
+    } else {
+        console.log(address)
+    }
+})
