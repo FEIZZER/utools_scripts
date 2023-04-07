@@ -2,18 +2,28 @@
 	"logo": "logo.png",
 	"preload": "preload.js",
 	"features": [
-		{
+        {
+            "code": "hello",
+            "explain": "hello world",
+            "cmds":["hello", "你好"]
+        },
+        {
 			"code": "domainIP",
 			"explain":"get the domain's ip",
-			"platform": ["win32", "darwin"],
 			"cmds": [
-			{
-				"type": "regex",
-				"label": "get ip for this domain",
-                "match":".+..+",
-				"minLength": 3,
-				"maxLength": 10000
-			}]
+                {
+                    "type": "regex",
+                    "label": "get ip for this domain",
+                    "match": "/(.*)/",
+                    "minLength": 3,
+                    "maxLength": 10000
+                },
+                {
+                    "type": "regex",
+                    "label": "文本正则匹配",
+                    "match": "/[\\u4E00-\\u9FA5]/"
+                }
+            ]
 		}
 	],
 	"pluginSetting": {

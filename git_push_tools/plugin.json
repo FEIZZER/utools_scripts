@@ -1,0 +1,18 @@
+{
+    "logo":"logo.png",
+	"preload": "preload.js",
+	"features": [
+		{
+		  "code": "gitpush",
+		  "explain": "hello world",
+		  "cmds":["gitpush"],
+		  "platform":["win32"]
+		},
+		{
+			"code": "gitsetproject",
+			"explain": "hello world",
+			"cmds":["gitsetproject"],
+			"platform":["win32"]
+		}
+	]
+}

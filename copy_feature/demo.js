@@ -14,3 +14,7 @@ dns.lookup("github.com", function(error, address) {
         console.log(address)
     }
 })
+
+var reg = new RegExp("^data\:image\/.+\;base64,.+")
+res = reg.test("data:image/y;base64,22")
+console.log(res)
